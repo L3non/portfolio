@@ -43,7 +43,7 @@
 }
 
 body {
-    background-color: var(--bg-white);
+    background-color: #ccc;
     color: var(--txt-grey);
     font-family: var(--ff-poppins);
     font-size: var(--fs-1);
