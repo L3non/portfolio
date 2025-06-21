@@ -1,0 +1,11 @@
+/* == == == Main == == == */
+
+main {
+    /* Hero Section */
+    & #hero {
+        overflow: hidden;
+        background-color: var(--dark);
+        width: 100vw;
+        height: 100vh;
+    }
+}

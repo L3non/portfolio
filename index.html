@@ -3,254 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bruno Fernandes</title>
+    <title>Bruno Fernandes Portfolio</title>
 
-<!-- Styles -->
-    <link rel="stylesheet" href="styles/style.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
 
-<!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/styles/global.css">
+    <link rel="stylesheet" href="assets/styles/index.css">
 
-<!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
-<!-- Header -->
+    <!-- == == == Header == == == -->
     <header>
-        <nav class="container">
-            <div id="nav_data">
-                <a href="#" id="nav_logo"><i class="fa-solid fa-code"></i> CodeBox</a>
 
-                <div id="nav_toggle">
-                    <i class="nav_toggle_menu fa-solid fa-bars"></i>
-                    <i class="nav_toggle_close fa-solid fa-x"></i>
-                </div>
-            </div>
-
-            <div id="nav_menu" class="nav__menu">
-                <ul id="nav_list">
-                    <li>
-                        <a class="nav_link" href="#">Home</a>
-                    </li>
-                    <li class="drop_item">
-                        <div class="drop__btn nav_link">
-                            Discover <i class="drop__arrow fa-solid fa-chevron-down"></i>
-                        </div>
-
-                        <div class="drop__container">
-                            <div class="drop__content">
-                                <div class="drop__group">
-                                    <div class="drop__icon">
-                                        <i class="fa-solid fa-user"></i>
-                                    </div>
-
-                                    <span class="drop__title">Most viewed courses</span>
-
-                                    <ul class="drop__list">
-                                        <li>
-                                            <a href="#" class="drop__link">HTML for beginners</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="drop__link">Advanced CSS</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="drop__link">JavaScript OOP</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="drop__group">
-                                    <div class="drop__icon">
-                                        <i class="fa-solid fa-user"></i>
-                                    </div>
-
-                                    <span class="drop__title">Popular courses</span>
-
-                                    <ul class="drop__list">
-                                        <li>
-                                            <a href="#" class="drop__link">Development with Flutter</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="drop__link">Web development with React</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="drop__link">Backend development expert</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="drop__group">
-                                    <div class="drop__icon">
-                                        <i class="fa-solid fa-user"></i>
-                                    </div>
-
-                                    <span class="drop__title">Careers</span>
-
-                                    <ul class="drop__list">
-                                        <li>
-                                            <a href="#" class="drop__link">Web development</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="drop__link">Applications development</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="drop__link">UI/UX design</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="drop__link">Informatic security</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="drop__group">
-                                    <div class="drop__icon">
-                                        <i class="fa-solid fa-user"></i>
-                                    </div>
-
-                                    <span class="drop__title">Certifications</span>
-
-                                    <ul class="drop__list">
-                                        <li>
-                                            <a href="#" class="drop__link">Course certificates</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="drop__link">Free certificates</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="drop_item">
-                        <div class="nav_link drop__btn">
-                            Resources <i class="drop__arrow fa-solid fa-chevron-down"></i>
-                        </div>
-
-                        <div class="drop__container">
-                            <div class="drop__content">
-                                <div class="drop__group">
-                                    <div class="drop__icon">
-                                        <i class="ri-code-line"></i>
-                                    </div>
-
-                                    <span class="drop__title">Web templates</span>
-
-                                    <ul class="drop__list">
-                                        <li>
-                                            <a href="#" class="drop__link">Free templates</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="drop__link">Premium templates</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="drop__group">
-                                    <div class="drop__icon">
-                                        <i class="fa-solid fa-user"></i>
-                                    </div>
-
-                                    <span class="drop__title">Designs</span>
-
-                                    <ul class="drop__list">
-                                        <li>
-                                            <a href="#" class="drop__link">Web designs</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="drop__link">App designs</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="drop__link">Component design</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="drop__group">
-                                    <div class="drop__icon">
-                                        <i class="fa-solid fa-user"></i>
-                                    </div>
-
-                                    <span class="drop__title">Others</span>
-
-                                    <ul class="drop__list">
-                                        <li>
-                                            <a href="#" class="drop__link">Recent blogs</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="drop__link">Tutorial videos</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="drop__link">Webinar</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <a href="#" class="nav_link">Pricing</a>
-                    </li>
-
-                    <li class="drop_item">                        
-                        <div class="nav_link drop__btn">
-                            Company <i class="drop__arrow fa-solid fa-chevron-down"></i>
-                        </div>
-
-                        <div class="drop__container">
-                            <div class="drop__content">
-                                <div class="drop__group">
-                                    <div class="drop__icon">
-                                        <i class="fa-solid fa-user"></i>
-                                    </div>
-
-                                    <span class="drop__title">About us</span>
-
-                                    <ul class="drop__list">
-                                        <li>
-                                            <a href="#" class="drop__link">About us</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="drop__link">Support</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="drop__link">Contact us</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="drop__group">
-                                    <div class="drop__icon">
-                                        <i class="fa-solid fa-user"></i>
-                                    </div>
-
-                                    <span class="drop__title">Safety and quality</span>
-
-                                    <ul class="drop__list">
-                                        <li>
-                                            <a href="#" class="drop__link">Cookie settings</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="drop__link">Privacy Policy</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
     </header>
 
+    <!-- == == == Main == == == -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div id="particles-js"></div>
+        </section>
+    </main>
 
-<!-- Scripts -->
-    <script src="scripts/script.js"></script>
+    <!-- == == == Footer == == == -->
+    <footer>
 
+    </footer>
 
+    <!-- == == == JavaScript == == == -->
+    
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- Particles -->
+    <script src="assets/js/particles.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <!-- Index -->
+    <script src="assets/js/index.js"></script>
 </body>
 </html>

@@ -1,0 +1,75 @@
+/* == == == Fonts == == == */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* == == == Variables == == == */
+
+:root {
+    /* Shadows */
+    --sh-dark:     #12121299;
+    --sh-default:  #0000004d;
+    --sh-light:    #0000001f;
+    --sh-lighter:  #12121217;
+
+    /* Colors */
+    --primary-l:   #fdfd36;
+    --primary:     #fcfc04;
+    --primary-d:   #caca03;
+
+    --light-l:     #ffffff;
+    --light:       #f7f7f7;
+    --light-d:     #e6e6e6;
+
+    --grey-l:      #cccccc;
+    --grey:        #808080;
+    --grey-d:      #4c4c4c;
+    
+    --dark-l:      #333333;
+    --dark:        #121212;
+    --dark-d:      #000000;
+
+    /* Font family */
+    --ff-s-serif: "Poppins", sans-serif;
+
+    /* Letter spacing*/
+    --ls-bigger: 2.1px;
+    --ls-big: 1.5px;
+    --ls-medium: 1.2px;
+    --ls-small: 1px;
+
+    /* Font size */
+    --fs-big: 42px;
+    --fs-h1: 34px;
+    --fs-h2: 30px;
+    --fs-h3: 26px;
+    --fs-h4: 22px;
+    --fs-h5: 18px;
+    --fs-par: 16px;
+    --fs-small: 14px;
+    --fs-smaller: 12px;
+
+    /* Font weight */
+    --fw-bold: 700;
+    --fw-semi-bold: 600;
+    --fw-regular: 400;
+    --fw-light: 300;
+
+    /* Z index */
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 999;
+
+    /* Time */
+    --t-fast: .3s;
+    --t-medium: .6s;
+    --t-slow: .9s;
+    --t-slower: 1.5s;
+}
+
+/* == == == Global == == == */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
