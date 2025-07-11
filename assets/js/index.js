@@ -35,28 +35,24 @@ document.addEventListener('click', function(e) {
 });
 
 // Scroll sections active link
-const sections = document.querySelectorAll('section[id]');
 
-function scrollActive() {
-    const scrollY = window.scrollY;
+window.addEventListener('DOMContentLoaded', () => {
+    gsap.registerPlugin(ScrollTrigger);
 
-    sections.forEach(current => {
-        const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 150;
-        const sectionId = current.getAttribute('id');
-        const navItem = document.querySelector(`.nav_link[href="#${sectionId}"]`);
+    // Para cada seção, ativa o link correspondente
+    document.querySelectorAll("section").forEach((section) => {
+        ScrollTrigger.create({
+            trigger: section,
+            start: "top center",
+            end: "bottom center",
+            toggleClass: {
+                targets: document.querySelector(`a[href="#${section.id}"]`),
+                className: "active"
+            },
+        });
 
-        if (!navItem) return;
-
-        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-            navItem.classList.add('active_link');
-        } else {
-            navItem.classList.remove('active_link');
-        }
     });
-}
-
-window.addEventListener('scroll', scrollActive);
+});
 
 /* Modal */
 const languageIcon = document.getElementById('language_icon');

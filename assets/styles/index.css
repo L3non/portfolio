@@ -79,7 +79,7 @@
     width: 100%;
 }
 
-.nav_link.active_link .hover-text{border-right: 3px solid var(--primary);}
+.nav_link.active .hover-text {border-right: 3px solid var(--primary);}
 .nav.show_menu {transform: translateX(0);}
 
 /* == == == Header == == == */
