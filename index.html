@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bruno Fernandes Portfolio</title>
+    <title>Bruno Fernandes</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
@@ -12,19 +12,110 @@
     <link rel="stylesheet" href="assets/styles/global.css">
     <link rel="stylesheet" href="assets/styles/index.css">
 
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
 
 </head>
 <body>
-    <!-- == == == Header == == == -->
-    <header>
+    <!-- Nav -->
+    <nav class="nav" id="nav">
+        <div class="nav_menu" id="nav_menu">
+            <div class="nav_shape"></div>
 
+            <div class="nav_close" id="nav_close">
+                <i class='bx bx-x'></i>
+            </div>
+
+            <ul class="nav_list">
+                <li class="nav_item">
+                    <a href="#home" class="nav_link button" data-text="Home">
+                        <span class="actual-text">&nbsp;Home&nbsp;</span>
+                        <span aria-hidden="true" class="hover-text">&nbsp;Home&nbsp;</span>
+                    </a>
+                </li>
+
+                <li class="nav_item">
+                    <a href="#about" class="nav_link button" data-text="About">
+                        <span class="actual-text">&nbsp;About&nbsp;</span>
+                        <span aria-hidden="true" class="hover-text">&nbsp;About&nbsp;</span>
+                    </a>
+                </li>
+
+                <li class="nav_item">
+                    <a href="#portfolio" class="nav_link button" data-text="Portfolio">
+                        <span class="actual-text">&nbsp;Portfolio&nbsp;</span>
+                        <span aria-hidden="true" class="hover-text">&nbsp;Portfolio&nbsp;</span>
+                    </a>
+                </li>
+
+                <li class="nav_item">
+                    <a href="#skills" class="nav_link button" data-text="Skills">
+                        <span class="actual-text">&nbsp;Skills&nbsp;</span>
+                        <span aria-hidden="true" class="hover-text">&nbsp;Skills&nbsp;</span>
+                    </a>
+                </li>
+
+                <li class="nav_item">
+                    <a href="#contact" class="nav_link button" data-text="Contact">
+                        <span class="actual-text">&nbsp;Contact&nbsp;</span>
+                        <span aria-hidden="true" class="hover-text">&nbsp;Contact&nbsp;</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- == == == Header == == == -->
+    <header class="header" id="header">
+        <nav class="header_nav">
+            <!-- Language changer -->
+            <i class="fa-solid fa-globe" id="language_icon"></i>
+
+            <a href="#" class="header_logo">Bruno Fernandes</a>
+
+            <!-- Toggle button -->
+            <div class="header_toggle" id="header_toggle">
+                <i class='bx bx-grid-alt'></i>
+            </div>
+        </nav>
     </header>
+
+    <!-- Modal -->
+    <div id="language_modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close_modal">&times;</span>
+            <h3>Escolha o idioma</h3>
+            <p>Aqui você pode colocar opções de idiomas ou outras informações.</p>
+        </div>
+    </div>
 
     <!-- == == == Main == == == -->
     <main>
         <!-- Hero Section -->
-        <section id="hero">
-            <div id="particles-js"></div>
+        <section id="home">
+            <h1>ABOUT</h1>
+        </section>
+
+        <section id="about">
+            <h1>ABOUT</h1>
+            
+        </section>
+
+        <section id="portfolio">
+            <h1>PORTFOLIO</h1>
+            
+        </section>
+
+        <section id="skills">
+            <h1>SKILLS</h1>
+            
+        </section>
+
+        <section id="contact">
+            <h1>CONTACT</h1>
+
         </section>
     </main>
 
@@ -34,14 +125,6 @@
     </footer>
 
     <!-- == == == JavaScript == == == -->
-    
-    <!-- Jquery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-    <!-- Particles -->
-    <script src="assets/js/particles.js"></script>
-    <script src="assets/js/app.js"></script>
-
     <!-- Index -->
     <script src="assets/js/index.js"></script>
 </body>
