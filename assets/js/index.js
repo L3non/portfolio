@@ -35,11 +35,9 @@ document.addEventListener('click', function(e) {
 });
 
 // Scroll sections active link
-
 window.addEventListener('DOMContentLoaded', () => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Para cada seção, ativa o link correspondente
     document.querySelectorAll("section").forEach((section) => {
         ScrollTrigger.create({
             trigger: section,

@@ -7,9 +7,21 @@
     position: fixed;
     top: 0;
     left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transform: translateX(-100%);
-    transition: transform var(--t-fast) ease-in-out;
     z-index: var(--z-modal);
+    transition: transform var(--t-fast) ease-in-out;
+}
+
+.nav .nav_menu {
+    padding: 15px 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
 .nav .nav_shape {
@@ -26,25 +38,18 @@
 
 .nav .nav_close {
     cursor: pointer;
-    color: var(--light);
-    font-size: var(--fs-h2);
     position: relative;
     display: inline-flex;
 }
 
-.nav .nav_data .nav_mask {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(224deg, #a22fe9 -2%, #ddaafe 97%);
-    border-radius: 1.5rem;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin-bottom: 1rem;
+.nav_close i {
+    color: var(--light);
+    font-size: var(--fs-h3);
 }
 
 .nav .nav_list {
+    margin-top: auto;
+    margin-bottom: auto;
     display: flex;
     flex-direction: column;
     row-gap: 30px;
@@ -63,18 +68,18 @@
 
 .hover-text {
     overflow: hidden;
-    -webkit-text-stroke: 1px var(--primary);
     content: attr(data-text);
+    -webkit-text-stroke: 1px var(--primary);
     color: var(--primary);
-    height: 36px;
     width: 0%;
+    height: 36px;
     inset: 0;
     position: absolute;
     transition: var(--t-medium);
 }
 
 .button:hover .hover-text {
-    filter: drop-shadow(0 0 24px var(--primary));
+    filter: drop-shadow(0 0 2px var(--primary-d));
     border-right: 3px solid var(--primary);
     width: 100%;
 }
@@ -103,34 +108,47 @@
     align-items: center;
 }
 
- nav i, nav a  {
+.header_nav i, .header_nav a  {
     cursor: pointer;
     color: var(--dark);
     font-size: var(--fs-h5);
+}
+
+.header_nav i:hover {
+    text-shadow: 1px 1px 1px var(--sh-default);
+    color: var(--dark-d);
+    padding-bottom: 3px;
 }
 
 .header_logo {
     text-transform: uppercase;
     letter-spacing: var(--ls-small);
     font-weight: var(--fw-light);
+    transition: var(--t-fast);
+}
+
+.header_logo:hover {
+    color: var(--dark-d);
+    letter-spacing: var(--ls-bigger);
 }
 
 .header_toggle {
     display: flex;
     align-items: center;
+    transition: var(--t-fast);
 }
 
 /* Modal */
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
 }
 
 /* Modal content */
