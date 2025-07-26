@@ -83,6 +83,18 @@ html, body {
 ul {list-style: none;}
 a {text-decoration: none;}
 
+button {
+    cursor: pointer;
+    border: none;
+}
+
+.title {
+    text-transform: uppercase;
+    letter-spacing: var(--ls-small);
+    font-weight: var(--fw-light);
+    transition: var(--t-fast);
+}
+
 /* == == == Scroll bar == == == */
 ::-webkit-scrollbar {
     background-color: var(--dark);
