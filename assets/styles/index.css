@@ -205,36 +205,151 @@
 
 .lang_btn {
     cursor: pointer;
+    overflow: hidden;
     border: 1px solid transparent;
     background-color: var(--light-d);
     background-repeat: no-repeat;
-    background-size: 30px 30px;
-    background-position: center left 12px;
     text-transform: uppercase;
     width: 100%;
     height: 48px;
     letter-spacing: var(--ls-small);
     font-size: var(--fs-small);
+    position: relative;
+    text-align: center;
+    z-index: 1;
     transition: all var(--t-fast);
 }
 
-.lang_btn.br { background-image: url(../images/flags/brazil.png); }
-.lang_btn.en { background-image: url(../images/flags/usa.png); }
-.lang_btn.es { background-image: url(../images/flags/esp.png); }
-.lang_btn:hover {background-color: var(--grey-l);}
-.lang_btn.selected {border-color: var(--grey-d);}
-
-.lang_save_btn {
-    background-color: var(--primary);
-    text-transform: uppercase;
-    margin-top: 9px;
-    padding: 12px 0;
-    letter-spacing: var(--ls-small);
-    font-size: var(--fs-small);
-    transition: var(--t-fast);
+.lang_btn::before {
+    content: '';
+    background-image: linear-gradient(to right, var(--primary-l) 50%, var(--primary) 100%);
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: -1;
+    transition: var(--t-medium) ease;
 }
 
-.lang_save_btn:hover {background-color: var(--primary-d);}
+.lang_btn:hover::before {width: 100%;}
+
+.lang_btn::after {
+    content: '';
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+.lang_btn.br::after {background-image: url(../images/flags/brazil.png);}
+.lang_btn.en::after {background-image: url(../images/flags/usa.png);}
+.lang_btn.es::after {background-image: url(../images/flags/esp.png);}
+
+.lang_btn.selected {
+    border-color: var(--grey-d);
+    background-color: var(--grey-l);
+}
+
+.lang_btn.selected:hover::before {width: 0;}
+
+.lang_save_btn {
+    border: 2px solid var(--dark);
+    background-color: transparent;
+    color: var(--primary);
+    margin-top: 6px;
+    height: 48px;
+    letter-spacing: var(--ls-small);
+    font-size: var(--fs-small);
+    float: right;
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    transition: all var(--t-fast) ease-in-out;
+}
+
+.lang_save_btn::before {
+    content: '';
+    background: var(--dark);
+    width: 24px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 24px;
+    transform: translateY(-50%);
+    transform-origin: center;
+    transition: background var(--t-fast) linear, width var(--t-fast) linear;
+}
+
+.lang_save_btn .text {
+    text-transform: uppercase;
+    color: var(--dark);
+    padding-left: 60px;
+    font-size: var(--fs-par);
+    display: block;
+    text-align: left;
+    transition: all var(--t-fast) ease-in-out;
+}
+
+.lang_save_btn .top-key,
+.lang_save_btn .bottom-key-1,
+.lang_save_btn .bottom-key-2 {
+    background: var(--light);
+    height: 2px;
+    position: absolute;
+    transition: width var(--t-medium) ease-out, left var(--t-fast) ease-out;
+}
+
+.lang_save_btn .top-key {
+    width: 24px;
+    top: -2px;
+    left: 9px;
+}
+
+.lang_save_btn .bottom-key-1 {
+    width: 24px;
+    right: 30px;
+    bottom: -2px;
+}
+
+.lang_save_btn .bottom-key-2 {
+    width: 9px;
+    right: 9px;
+    bottom: -2px;
+}
+
+.lang_save_btn:hover {
+    background: var(--dark);
+    color: var(--primary);
+}
+
+.lang_save_btn:hover::before {
+    background: var(--primary);
+    width: 12px;
+}
+
+.lang_save_btn:hover .text {
+    color: var(--primary);
+    padding-left: 48px;
+}
+
+.lang_save_btn:hover .top-key {
+    left: -2px;
+    width: 0px;
+}
+
+.lang_save_btn:hover .bottom-key-1,
+.lang_save_btn:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
+}
 
 /* == == == Main == == == */
 
